@@ -1,0 +1,22 @@
+.venv/
+.video_deps/
+.agents/
+.codex/
+__pycache__/
+*.py[cod]
+*.log
+
+build/
+dist/
+*.spec
+
+test_artifacts/
+航拍处理结果/
+videos/
+spreadsheet_work/
+vehicle-counter-desktop-dev-doc.md
+
+# Unused source artwork; keep the icon used by build_windows.ps1.
+assets/road_stitcher_icon*.png
+assets/road_stitcher.ico
+

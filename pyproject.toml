@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aerial-road-stitcher"
+version = "0.3.8"
+description = "Windows desktop tool for stitching nadir aerial road videos"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "numpy>=2,<3",
+    "opencv-python-headless>=4.10,<6",
+    "PySide6>=6.8,<7",
+]
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6.11,<7"]
+
+[project.scripts]
+road-stitcher = "road_stitcher.cli:main"
+
+[tool.setuptools]
+packages = ["road_stitcher"]
+
+[tool.setuptools.package-data]
+road_stitcher = ["assets/*.png"]
